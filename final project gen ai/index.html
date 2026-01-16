@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Industrial Cafe Design Portfolio - AI-Generated Design Concepts">
+    <title>Industrial Cafe Portfolio | AI Design Concepts</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">AI Generated Commercial Space Concepts</h1>
+            <p class="hero-subtitle">Design Your Future with Artificial Intelligence</p>
+            <p class="hero-description">Exploring the intersection of artificial intelligence and interior architecture through diverse commercial space concepts including cafes, offices, restaurants, retail, and galleries</p>
+            <a href="#gallery" class="cta-button">Explore Concepts</a>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="container">
+            <h2 class="section-title">About This Project</h2>
+            <p class="intro-text">
+                This portfolio showcases innovative commercial space design concepts created using generative AI technologies. 
+                Each concept explores different interior design styles across various commercial applications—cafes, offices, restaurants, retail spaces, and galleries—
+                demonstrating how AI can be leveraged in the design and interior architecture workflow.
+            </p>
+        </div>
+    </section>
+
+    <!-- AI Generation Section -->
+    <section class="ai-generator">
+        <div class="container">
+            <h2 class="section-title">Generate Your Own Concept</h2>
+            <p class="ai-intro-text">Use AI to create custom industrial cafe design concepts. Describe your vision and let AI bring it to life.</p>
+            
+            <div class="generator-wrapper">
+                <div class="generator-form">
+                    <div class="info-box">
+                        <h3>🎨 AI Image Generator with Google Gemini</h3>
+                        <p>Generate images instantly with Gemini-enhanced prompts - 100% free & unlimited!</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gemini-key">Google Gemini API Key</label>
+                        <input type="password" id="gemini-key" placeholder="AIzaSy..." class="form-input">
+                        <small>Get free at <a href="https://ai.google.dev" target="_blank">ai.google.dev</a> • Used to enhance your prompts for better image generation • Stored locally only</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prompt-input">What do you want to generate?</label>
+                        <textarea id="prompt-input" rows="5" class="form-input" placeholder="Describe anything you want to create:
+
+• A futuristic cafe
+• A cozy bookstore
+• A modern office
+• A restaurant interior
+• A retail shop
+• A gallery space
+• Any design concept you imagine..."></textarea>
+                        <small>Be as specific as you like! Gemini will enhance your description for better AI-generated images.</small>
+                    </div>
+
+                    <div class="quick-presets">
+                        <p class="preset-label">Quick Presets:</p>
+                        <div class="preset-buttons">
+                            <button type="button" class="preset-btn" data-preset="cafe">☕ Cafe</button>
+                            <button type="button" class="preset-btn" data-preset="office">🏢 Office</button>
+                            <button type="button" class="preset-btn" data-preset="restaurant">🍽️ Restaurant</button>
+                            <button type="button" class="preset-btn" data-preset="retail">🛍️ Retail</button>
+                            <button type="button" class="preset-btn" data-preset="gallery">🖼️ Gallery</button>
+                        </div>
+                    </div>
+
+                    <button id="generate-btn" class="generate-button">
+                        <span class="btn-text">✨ Generate Image</span>
+                        <span class="btn-loader" style="display: none;">
+                            <span class="spinner"></span> Creating with Gemini...
+                        </span>
+                    </button>
+
+                    <div id="success-message" class="success-message" style="display: none;"></div>
+                </div>
+
+                <div class="generator-preview">
+                    <div id="preview-placeholder" class="preview-placeholder">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="80" height="60" stroke="#d4af37" stroke-width="2" fill="none"/>
+                            <circle cx="35" cy="45" r="8" stroke="#d4af37" stroke-width="2" fill="none"/>
+                            <polyline points="10,80 30,60 50,70 70,50 90,80" stroke="#d4af37" stroke-width="2" fill="none"/>
+                        </svg>
+                        <p>Your AI-generated concept will appear here</p>
+                        <small>Powered by free AI • No API key needed</small>
+                    </div>
+                    <img id="generated-image" class="generated-image" style="display: none;" alt="AI Generated Cafe Concept">
+                    <div class="preview-actions" id="preview-actions" style="display: none;">
+                        <button id="download-btn" class="action-button">💾 Download Image</button>
+                        <button id="regenerate-btn" class="action-button secondary">🔄 Regenerate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Design Concepts</h2>
+            
+            <div class="gallery-grid">
+                <!-- Concept 1: Urban Loft Cafe -->
+                <article class="concept-card" data-concept="1">
+                    <div class="concept-image-wrapper">
+                        <img src="https://image.pollinations.ai/prompt/modern%20industrial%20cafe%20interior%20with%20high%20ceilings%20exposed%20brick%20walls%20large%20warehouse%20windows%20natural%20light%20edison%20bulbs%20reclaimed%20wood%20tables%20metal%20chairs%20concrete%20floor%20plants%20urban%20loft%20aesthetic%20photorealistic%20architectural%20photography?width=1024&height=640&nologo=true&seed=1001" alt="Urban Loft Cafe" class="concept-image" loading="lazy">
+                        <div class="concept-overlay">
+                            <button class="view-button" data-concept="1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="concept-info">
+                        <h3 class="concept-title">Urban Loft Cafe</h3>
+                        <p class="concept-brief">High ceilings with exposed brick and concrete</p>
+                    </div>
+                </article>
+
+                <!-- Concept 2: Minimalist Industrial -->
+                <article class="concept-card" data-concept="2">
+                    <div class="concept-image-wrapper">
+                        <img src="https://image.pollinations.ai/prompt/minimalist%20industrial%20cafe%20interior%20clean%20lines%20monochromatic%20palette%20polished%20concrete%20floor%20white%20brick%20black%20steel%20simple%20furniture%20spacious%20negative%20space%20modern%20photorealistic%20architectural%20photography?width=1024&height=640&nologo=true&seed=2002" alt="Minimalist Industrial Cafe" class="concept-image" loading="lazy">
+                        <div class="concept-overlay">
+                            <button class="view-button" data-concept="2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="concept-info">
+                        <h3 class="concept-title">Minimalist Industrial</h3>
+                        <p class="concept-brief">Clean lines and refined simplicity</p>
+                    </div>
+                </article>
+
+                <!-- Concept 3: Vintage Industrial -->
+                <article class="concept-card" data-concept="3">
+                    <div class="concept-image-wrapper">
+                        <img src="https://image.pollinations.ai/prompt/vintage%20industrial%20cafe%20interior%201920s%201950s%20aged%20brick%20antique%20machinery%20distressed%20leather%20seating%20reclaimed%20wood%20warm%20edison%20lighting%20brass%20copper%20nostalgic%20atmosphere%20photorealistic%20architectural%20photography?width=1024&height=640&nologo=true&seed=3003" alt="Vintage Industrial Cafe" class="concept-image" loading="lazy">
+                        <div class="concept-overlay">
+                            <button class="view-button" data-concept="3">View Details</button>
+                        </div>
+                    </div>
+                    <div class="concept-info">
+                        <h3 class="concept-title">Vintage Industrial</h3>
+                        <p class="concept-brief">Retro elements with warm, nostalgic touches</p>
+                    </div>
+                </article>
+
+                <!-- Concept 4: Modern Factory -->
+                <article class="concept-card" data-concept="4">
+                    <div class="concept-image-wrapper">
+                        <img src="https://image.pollinations.ai/prompt/contemporary%20modern%20industrial%20cafe%20sleek%20stainless%20steel%20glass%20partitions%20polished%20concrete%20metallic%20finish%20LED%20lighting%20high-tech%20coffee%20equipment%20futuristic%20industrial%20aesthetic%20photorealistic%20architectural%20photography?width=1024&height=640&nologo=true&seed=4004" alt="Modern Factory Cafe" class="concept-image" loading="lazy">
+                        <div class="concept-overlay">
+                            <button class="view-button" data-concept="4">View Details</button>
+                        </div>
+                    </div>
+                    <div class="concept-info">
+                        <h3 class="concept-title">Modern Factory</h3>
+                        <p class="concept-brief">Sleek, contemporary industrial aesthetic</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal/Lightbox -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-section">
+                    <img id="modal-image" src="" alt="" class="modal-image">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title" class="modal-title"></h2>
+                    <p id="modal-description" class="modal-description"></p>
+                    
+                    <div class="modal-features">
+                        <h3>Key Features</h3>
+                        <ul id="modal-features-list"></ul>
+                    </div>
+                    
+                    <div class="modal-materials">
+                        <h3>Materials & Finishes</h3>
+                        <p id="modal-materials-text"></p>
+                    </div>
+                    
+                    <div class="modal-ai-info">
+                        <h3>AI Generation Details</h3>
+                        <p id="modal-ai-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                A design exploration project on "Using GenAI in Design & Interior Architecture"
+            </p>
+            <p class="footer-credits">
+                Generated with AI | Portfolio © 2026
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
